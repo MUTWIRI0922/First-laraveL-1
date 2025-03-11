@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 Route::get('/Dashboard', function () {
     return view('Dashboard');
-});
+});  
 Route::get('/Register', function () {
     return view('Register');
 });
