@@ -34,7 +34,7 @@
             </div>
             <div class="form-group"></div>
                 <label for="role">Role</label>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" name="submit" class="btn btn-primary">Register</button>
           
         </form>
 
