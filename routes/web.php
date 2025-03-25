@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Authcontroller;
 use App\Http\Controllers\maincontroller;
 use Illuminate\Support\Facades\Route;
 
@@ -20,8 +21,10 @@ Route::get('/', function () {
 Route::get('/Dashboard', function () {
     return view('Dashboard');
 });  
-Route::get('/Register', function () {
-    return view('Register');
-});
+
 route::get('/Create', [MainController::class,'create'])->name('Create');
 route::post('/Store',[maincontroller::class,'store'])->name('Store');
+Route::get('/login',[Authcontroller::class,"login"])->name('login');
+Route::post('/login',[Authcontroller::class,"loginsubmit"])->name('login.submit');
+Route::get('/Register', [Authcontroller::class,"register"]);
+Route::post('/Register',[Authcontroller::class,"registersubmit"])->name('register.submit');
